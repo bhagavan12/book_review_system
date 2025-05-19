@@ -1,0 +1,122 @@
+/* Import auth styles */
+@import './auth.css';
+
+/* Login page specific styles */
+.login-container {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.login-container h2 {
+  margin-bottom: var(--spacing-6);
+  position: relative;
+}
+
+.login-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-full);
+}
+
+/* Remember me checkbox */
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-2);
+}
+
+.remember-me input[type="checkbox"] {
+  width: auto;
+  margin-right: var(--spacing-2);
+}
+
+.remember-me label {
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+/* Forgot password link */
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-2);
+  color: var(--color-gray-600);
+  transition: color var(--transition-fast);
+}
+
+.forgot-password:hover {
+  color: var(--color-primary);
+}
+
+/* Social login */
+.social-login {
+  /* margin-top: var(--spacing-6); */
+  text-align: center;
+}
+
+.social-login-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-2) 0;
+}
+
+.social-login-divider::before,
+.social-login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-gray-300);
+}
+
+.social-login-divider span {
+  padding: 0 var(--spacing-2);
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-1);
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  transition: all var(--transition-fast);
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-light);
+}
+
+/* Animation for input focus */
+.input-group input {
+  transform-origin: left;
+  transition: transform var(--transition-normal), border var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.input-group input:focus {
+  transform: scale(1.01);
+}
+
+/* Custom error styles for login */
+.login-container .error {
+  border-left: 3px solid var(--color-error);
+}

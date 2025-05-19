@@ -1,0 +1,47 @@
+/* Bookshelves.css */
+
+.bookshelf-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 100px auto 0px auto;
+    font-family: sans-serif;
+  }
+  
+  .bookshelf-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bookshelf-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .bookshelf-button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bookshelf-button:hover {
+    background-color: #4338ca;
+  }
+  
+  .bookshelf-card {
+    border: 1px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9fafb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  

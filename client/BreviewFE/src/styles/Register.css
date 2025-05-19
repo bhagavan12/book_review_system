@@ -1,0 +1,153 @@
+/* Import auth styles */
+@import './auth.css';
+
+/* Register page specific styles */
+.register-container {
+  width: 100%;
+}
+
+.register-container h2 {
+  margin-bottom: var(--spacing-6);
+  position: relative;
+}
+
+.register-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-full);
+}
+
+/* Password strength indicator */
+.password-strength {
+  margin-top: var(--spacing-2);
+}
+
+.password-strength-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-1);
+}
+
+.password-strength-label span {
+  color: var(--color-gray-600);
+}
+
+.password-strength-meter {
+  height: 4px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.password-strength-meter div {
+  height: 100%;
+  border-radius: var(--border-radius-full);
+  transition: width var(--transition-normal), background-color var(--transition-normal);
+}
+
+.password-strength-weak {
+  width: 25%;
+  background-color: var(--color-error);
+}
+
+.password-strength-medium {
+  width: 50%;
+  background-color: var(--color-warning);
+}
+
+.password-strength-strong {
+  width: 75%;
+  background-color: var(--color-primary);
+}
+
+.password-strength-very-strong {
+  width: 100%;
+  background-color: var(--color-success);
+}
+
+/* Terms and conditions */
+.terms {
+  display: flex;
+  align-items: flex-start;
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+.terms input[type="checkbox"] {
+  width: auto;
+  margin-right: var(--spacing-2);
+  margin-top: 4px;
+}
+
+.terms label {
+  margin-bottom: 0;
+  color: var(--color-gray-600);
+}
+
+.terms a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.register-container .error {
+  border-left: 3px solid var(--color-error);
+}
+
+/* Input field animations */
+.input-group {
+  position: relative;
+}
+
+.input-group::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-normal), left var(--transition-normal);
+  z-index: 1;
+}
+
+.input-group:focus-within::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Password match indicator */
+.password-match {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-2);
+}
+
+.password-match-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: var(--spacing-2);
+}
+
+.password-match-icon.match {
+  background-color: var(--color-success);
+}
+
+.password-match-icon.no-match {
+  background-color: var(--color-error);
+}
+
+.password-match.match {
+  color: var(--color-success);
+}
+
+.password-match.no-match {
+  color: var(--color-error);
+}

@@ -1,0 +1,235 @@
+/* Profile Page Styles */
+.profile-container {
+
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+  }
+  
+  .profile-header h2 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  /* Profile Info */
+  .profile-info {
+    margin-bottom: 3rem;
+  }
+  
+  .info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .info-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .info-item label {
+    display: block;
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item p {
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  /* Books Section */
+  .books-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: #2d3748;
+  }
+  
+  .section-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .book-item {
+    background: #f7fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .book-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-coverp,
+  .book-coverp-placeholder {
+    width: 100%;
+    height: 280px;
+    background-color: #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #718096;
+  }
+  
+  .book-coverp {
+    object-fit: cover;
+  }
+  
+  .book-detailsp {
+    padding: 0.5rem;
+  }
+  
+  .book-detailsp h4 {
+    margin: 0 0 0.5rem;
+    color: #2d3748;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  .book-authorp {
+    margin: 0;
+    color: #718096;
+    font-size: 0.7rem;
+  }
+  
+  /* Loading State */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    gap: 1rem;
+    color: #4299e1;
+  }
+  
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Error State */
+  .error-container {
+    text-align: center;
+    color: #e53e3e;
+    padding: 2rem;
+  }
+  
+  /* No Books State */
+  .no-books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: #718096;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .no-books p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-container {
+      margin: 1rem auto;
+    }
+  
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .info-card,
+    .books-section {
+      padding: 1.5rem;
+    }
+  
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+  
+    .book-coverp,
+    .book-coverp-placeholder {
+      height: 200px;
+    }
+  
+    .book-detailsp h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-avatar {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .profile-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .section-header h3 {
+      font-size: 1.25rem;
+    }
+  
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+  }

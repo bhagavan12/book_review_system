@@ -38,7 +38,7 @@ export const createBookshelf = createAsyncThunk(
     console.log(token);
 
     try {
-      const res = await axios.post(`http://localhost:3004/api/bookshelves/add`, { name }, {
+      const res = await axios.post(`${import.meta.env.VITE_API_BE}/api/bookshelves/add`, { name }, {
         headers: {
           Authorization: `Bearer ${token}`,
         }

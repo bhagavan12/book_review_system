@@ -14,7 +14,7 @@ const App = () => {
     const fetchTopRatedBooks = async () => {
       try {
 
-        const res = await axios.get("http://localhost:3004/api/books/books/topratings");
+        const res = await axios.get(`${import.meta.env.VITE_API_BE}/api/books/books/topratings`);
         setTopB(res.data);
         console.log("Top Rated Books:", res.data);
       } catch (error) {
